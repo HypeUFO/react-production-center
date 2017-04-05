@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 import Pot from './knob.component';
 import PadGrid from './pad-grid.component';
+import Controls from './controls.component';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 
@@ -112,7 +113,12 @@ class RPC extends React.Component {
                         style={styles.rpc}
                         children={
                             <div>
-                                <div id="lcd-screen" style={{width: 200, height: 100, backgroundColor: '#22bcd4', display: 'inline-block'}} >Edit Screen Here</div>
+                                <div id="lcd-screen" className="pad-grid col-xs-7 col-xs-offset-1" 
+                                style={{
+                                    //width: 200,
+                                    height: 100,
+                                    marginTop: 50,
+                                    backgroundColor: '#22bcd4', display: 'inline-block'}} >Edit Screen Here</div>
                                 <Pot
                                     title="Tempo"
                                     defaultValue={120}
@@ -153,15 +159,16 @@ class RPC extends React.Component {
                                     angleOffset={225}
                                     angleArc={270}
                                     />
-                                <input
+                                {/*<input
                                     type='range' min={0} max={1} step='any'
                                     //className="seek"
                                     //value={played}
                                     //onMouseDown={this.onSeekMouseDown}
                                     //onChange={this.onSeekChange}
                                     //onMouseUp={this.onSeekMouseUp}
-                                />
+                                />*/}
                                 <PadGrid />
+                                <Controls />
                             </div>} >
                     </div>
             </div>

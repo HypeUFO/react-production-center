@@ -5,13 +5,19 @@ import classnames from 'classnames';
 
 import RaisedButton from 'material-ui/RaisedButton';
 
-const style = {
-  margin: 0,
-  minWidth: 20,
-  width: '25%',
-  //minHeight: 65,
-border: '2px solid black'
-};
+const styles = {
+    rBtn: {
+    margin: 0,
+    minWidth: 20,
+    width: '25%',
+    //minHeight: 65,
+    border: '2px solid black'
+},
+    misc: {
+        minHeight: 70
+    }
+ }
+
 
 class PadGrid extends React.Component {
     constructor(props) {
@@ -69,28 +75,28 @@ class PadGrid extends React.Component {
         return (
             <div className="pad-grid col-xs-7 col-xs-offset-1" style={{backgroundColor: 'white', marginTop: 30}}>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={{minHeight: 70}} buttonStyle={{minHeight: 70}} style={style} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
                 </div>
             </div>
 
