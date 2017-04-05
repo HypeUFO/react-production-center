@@ -4,22 +4,50 @@ import classnames from 'classnames';
 
 
 import RaisedButton from 'material-ui/RaisedButton';
+import Dropzone from 'react-dropzone';
 
 const styles = {
+    pad: {
+    margin: 0,
+    minWidth: 20,
+    width: '25%',
+    display: 'inline-block',
+},
+    dropzone: {
+        width: '100%',
+    },
     rBtn: {
     margin: 0,
     minWidth: 20,
-    width: '40%',
-    //minHeight: 65,
-    border: '2px solid black',
-    margin: '2%'
+    width: '100%',
+    border: '2px solid black'
 },
     misc: {
-        minHeight: 40
+        minHeight: 70
     }
  }
 
-class Controls extends React.Component {
+
+class PadGrid extends React.Component {
+    constructor(props) {
+        super(props);
+
+    this.handleDrop = (acceptedFiles, rejectedFiles) => {
+
+        const file = acceptedFiles[0];
+
+        const upload = {
+            url: file.preview,
+            name: file.name,
+            // title: file.name,
+            // cover: "../dj-react/assets/images/djR-vinyl-label.jpg",
+            format: file.type,
+            size: file.size,
+        }
+        // this.props.selectSong(upload, this.props.deckNum);
+        console.log(file.name, 'has been loaded');
+    }
+}
 
     render() {
 
@@ -27,14 +55,11 @@ class Controls extends React.Component {
 
 
         return (
-            <div className="pad-grid col-xs-3" style={{backgroundColor: 'white', marginTop: 35, marginLeft: '4%'}}>
-                <div style={{height: 243}}></div>
-                <RaisedButton label="Play" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn}    labelStyle={{fontSize: '0.5em'}}/>
-                <RaisedButton label="Stop" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn}          labelStyle={{fontSize: '0.5em'}}/>
-                {/*<RaisedButton label="<<" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn}            labelStyle={{fontSize: '0.5em'}}/>
-                <RaisedButton label=">>" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn}            labelStyle={{fontSize: '0.5em'}}/>*/}
+            <div style={styles.pad}>
+                <Dropzone style={styles.dropzone} disableClick={true} onDrop={this.handleDrop}>
+                    <RaisedButton label={this.props.label} rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.75em'}}/>
+                </Dropzone>
             </div>
-
         )
     }
 }
@@ -64,5 +89,5 @@ class Controls extends React.Component {
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Turntable);
 
-export default Controls;
+export default PadGrid;
 

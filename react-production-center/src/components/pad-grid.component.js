@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 
 import RaisedButton from 'material-ui/RaisedButton';
+import Pad from './pad.component';
 
 const styles = {
     rBtn: {
@@ -73,30 +74,31 @@ class PadGrid extends React.Component {
 
 
         return (
-            <div className="pad-grid col-xs-7 col-xs-offset-1" style={{backgroundColor: 'white', marginTop: 30}}>
+            <div className="pad-grid col-xs-7 col-xs-offset-1" style={{backgroundColor: 'white', marginTop: 35}}>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    {/*<RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>*/}
+                    <Pad label="Pad 13" />
+                    <Pad label="Pad 14" />
+                    <Pad label="Pad 15" />
+                    <Pad label="Pad 16" />
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <Pad label="Pad 9" />
+                    <Pad label="Pad 10" />
+                    <Pad label="Pad 11" />
+                    <Pad label="Pad 12" />
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <Pad label="Pad 5" />
+                    <Pad label="Pad 6" />
+                    <Pad label="Pad 7" />
+                    <Pad label="Pad 8" />
                 </div>
                 <div className="row">
-                    <RaisedButton label="Pad 1" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 2" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 3" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
-                    <RaisedButton label="Pad 4" rippleStyle={styles.misc} buttonStyle={styles.misc} style={styles.rBtn} labelStyle={{fontSize: '0.5em'}}/>
+                    <Pad label="Pad 1" />
+                    <Pad label="Pad 2" />
+                    <Pad label="Pad 3" />
+                    <Pad label="Pad 4" />
                 </div>
             </div>
 
