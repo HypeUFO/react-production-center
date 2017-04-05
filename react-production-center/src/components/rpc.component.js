@@ -1,6 +1,9 @@
 import React from 'react';
 
 import classnames from 'classnames';
+
+import Pot from './knob.component';
+import PadGrid from './pad-grid.component';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 
@@ -32,7 +35,7 @@ const styles = {
     },
     rpc: {
         // float: 'left',
-        height: 450,
+        height: 525,
         width: '100%',
         margin: 0,
         marginTop: 10,
@@ -109,6 +112,47 @@ class RPC extends React.Component {
                         style={styles.rpc}
                         children={
                             <div>
+                                <div id="lcd-screen" style={{width: 200, height: 100, backgroundColor: '#22bcd4', display: 'inline-block'}} >Edit Screen Here</div>
+                                <Pot
+                                    title="Tempo"
+                                    defaultValue={120}
+                                    //value={this.props.lpCutoff}
+                                    //onChange={(value) => {this.props.onLpFilterCutoffChange(value, this.props.deckNum)}}
+                                    min={30}
+                                    max={200}
+                                    angleOffset={225}
+                                    angleArc={270}
+                                    />
+                                    <Pot
+                                    title="Swing"
+                                    defaultValue={50}
+                                    //value={this.props.lpCutoff}
+                                    //onChange={(value) => {this.props.onLpFilterCutoffChange(value, this.props.deckNum)}}
+                                    min={0}
+                                    max={100}
+                                    angleOffset={225}
+                                    angleArc={270}
+                                    />
+                                <Pot
+                                    title="LP"
+                                    defaultValue={22000}
+                                    //value={this.props.lpCutoff}
+                                    //onChange={(value) => {this.props.onLpFilterCutoffChange(value, this.props.deckNum)}}
+                                    min={20}
+                                    max={22000}
+                                    angleOffset={225}
+                                    angleArc={270}
+                                    />
+                                    <Pot
+                                    title="HP"
+                                    defaultValue={20}
+                                    //value={this.props.lpCutoff}
+                                    //onChange={(value) => {this.props.onLpFilterCutoffChange(value, this.props.deckNum)}}
+                                    min={20}
+                                    max={22000}
+                                    angleOffset={225}
+                                    angleArc={270}
+                                    />
                                 <input
                                     type='range' min={0} max={1} step='any'
                                     //className="seek"
@@ -117,6 +161,7 @@ class RPC extends React.Component {
                                     //onChange={this.onSeekChange}
                                     //onMouseUp={this.onSeekMouseUp}
                                 />
+                                <PadGrid />
                             </div>} >
                     </div>
             </div>

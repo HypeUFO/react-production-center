@@ -33,7 +33,7 @@ const Logged = (props) => (
     <MenuItem value="1" primaryText="Settings" />
     <MenuItem value="2" primaryText="Help" />
     <MenuItem value="3" primaryText="Send feedback" />
-    <MenuItem value="4" primaryText="Sign out" />
+    {/*<MenuItem value="4" primaryText="Sign out" />*/}
   </IconMenu>
 );
 
@@ -64,13 +64,13 @@ class Header extends Component {
           iconElementLeft={<DrawerMenu />}
           iconElementRight={this.state.logged ? <Logged /> : <Login />}
         />
-        <Toggle
+        {/*<Toggle
           label="Logged In?"
           defaultToggled={false}
           onToggle={this.handleChange}
           labelPosition="right"
           style={{margin: 20}}
-        />
+        />*/}
       </div>
     );
   }
